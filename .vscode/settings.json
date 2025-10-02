@@ -1,0 +1,8 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "sonarlint.connectedMode.project": {
+        "connectionId": "",
+        "projectKey": ""
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
+}

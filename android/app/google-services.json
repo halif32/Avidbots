@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "474227253144",
+    "project_id": "avidbot-44153",
+    "storage_bucket": "avidbot-44153.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474227253144:android:9b3e1b508bfa92bd5755ed",
+        "android_client_info": {
+          "package_name": "com.avidbots"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh0U4iWhCgZbnm5ScqfvDKImWdFeSxdSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
