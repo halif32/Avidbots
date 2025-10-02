@@ -13,7 +13,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
-import DetailsScreen from './src/screens/DetailsScreen';
+import DetailsScreen from './src/screen/DetailsScreen';
 
 // Create stack navigator
 const Stack = createStackNavigator();
