@@ -21,5 +21,6 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
+          -Dsonar.organization=halif32
           -Dsonar.projectKey=halif32_Avidbots
           -Dsonar.branch.name=${{ github.head_ref || github.ref_name }}
