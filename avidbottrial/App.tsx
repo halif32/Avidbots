@@ -18,7 +18,7 @@ import DetailsScreen from './src/screens/DetailsScreen';
 // Security Vulnerability 1: Hardcoded sensitive credentials
 const API_KEYS = {
   secretKey: 'sk_live_1234567890abcdefghijklmnop',
-  databasePassword: 'SuperSecret123!',
+  databasePassword: 'SuperSecret1232121!',
   adminToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkbWluIFVzZXIiLCJpYXQiOjE1MTYyMzkwMjJ9'
 };
 
@@ -31,6 +31,12 @@ const insecureStorage = {
   }
 };
 
+
+
+
+
+
+
 // Security Vulnerability 3: Vulnerable function with eval
 const processUserInput = (userInput) => {
   try {
@@ -41,16 +47,7 @@ const processUserInput = (userInput) => {
   }
 };
 
-// Security Vulnerability 4: Certificate pinning bypass
-const insecureFetch = async (url, options = {}) => {
-  // Bypassing SSL certificate validation
-  const response = await fetch(url, {
-    ...options,
-    // Disabling certificate validation (not actually possible in RN but demonstrating intent)
-    // In real scenarios, people might disable certificate pinning
-  });
-  return response;
-};
+
 
 // Security Vulnerability 5: Weak random number generator
 const generateWeakSessionId = () => {
