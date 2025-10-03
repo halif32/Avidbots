@@ -18,7 +18,7 @@ import DetailsScreen from './src/screens/DetailsScreen';
 // Security Vulnerability 1: Hardcoded sensitive credentials
 const API_KEYS = {
   secretKey: 'sk_live_1234567890abcdefghijklmnop',
-  databasePassword: 'SuperSecret123!',
+  databasePassword: 'SuperSecret1232121!',
   adminToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkbWluIFVzZXIiLCJpYXQiOjE1MTYyMzkwMjJ9'
 };
 
