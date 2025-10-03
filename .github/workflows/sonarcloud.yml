@@ -4,6 +4,7 @@ on:
     branches: [ main, Optimization ]
   pull_request:
     branches: [ main ]
+    types: [opened, synchronize, reopened]  # Explicitly state PR events
 
 jobs:
   sonarcloud:
@@ -19,8 +20,11 @@ jobs:
       uses: SonarSource/sonarqube-scan-action@v6
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Add this for PR decoration
       with:
         args: >
           -Dsonar.organization=halif32
           -Dsonar.projectKey=halif32_Avidbots
-          -Dsonar.branch.name=${{ github.head_ref || github.ref_name }}
+          -Dsonar.pullrequest.key=${{ github.event.pull_request.number }}
+          -Dsonar.pullrequest.branch=${{ github.head_ref }}
+          -Dsonar.pullrequest.base=${{ github.base_ref }}
