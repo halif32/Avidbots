@@ -1,0 +1,25 @@
+name: SonarCloud Analysis
+on:
+  push:
+    branches: [ main, Optimization, feature/* ]
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  sonarcloud:
+    name: SonarCloud Scan
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Important for branch analysis
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarqube-scan-action@v4
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+          -Dsonar.projectKey=halif32_Avidbots
+          -Dsonar.branch.name=${{ github.head_ref || github.ref_name }}
