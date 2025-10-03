@@ -1,9 +1,9 @@
 name: SonarCloud Analysis
 on:
   push:
-    branches: [ main, Optimization, feature/* ]
+    branches: [ main, Optimization ]
   pull_request:
-    types: [opened, synchronize, reopened]
+    branches: [ main ]
 
 jobs:
   sonarcloud:
@@ -13,10 +13,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0  # Important for branch analysis
+        fetch-depth: 0
 
     - name: SonarCloud Scan
-      uses: SonarSource/sonarqube-scan-action@v4
+      uses: SonarSource/sonarqube-scan-action@v6
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
